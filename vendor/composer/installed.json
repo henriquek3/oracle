@@ -1,0 +1,88 @@
+[
+    {
+        "name": "taq/pdooci",
+        "version": "1.0.7",
+        "version_normalized": "1.0.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/taq/pdooci.git",
+            "reference": "898a8fcef39b7cf748454c06e98c45baecffca94"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/taq/pdooci/zipball/898a8fcef39b7cf748454c06e98c45baecffca94",
+            "reference": "898a8fcef39b7cf748454c06e98c45baecffca94",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-09-24T21:51:27+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "PDOOCI\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL"
+        ],
+        "authors": [
+            {
+                "name": "Eustaquio Rangel",
+                "email": "eustaquiorangel@gmail.com",
+                "homepage": "http://eustaquiorangel.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Replacement for the PHP PDO OCI class",
+        "homepage": "http://github.com/taq/pdooci",
+        "keywords": [
+            "oci",
+            "oracle",
+            "pdo",
+            "pdo_oci"
+        ]
+    },
+    {
+        "name": "semantic/ui",
+        "version": "2.2.10",
+        "version_normalized": "2.2.10.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Semantic-Org/Semantic-UI.git",
+            "reference": "dfc323e608ff15e36a336c17ef925ffc27b5bb2e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Semantic-Org/Semantic-UI/zipball/dfc323e608ff15e36a336c17ef925ffc27b5bb2e",
+            "reference": "dfc323e608ff15e36a336c17ef925ffc27b5bb2e",
+            "shasum": ""
+        },
+        "time": "2017-03-28T17:13:48+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jack Lukic",
+                "email": "jacklukic@gmail.com",
+                "homepage": "http://www.jacklukic.com",
+                "role": "Creator"
+            }
+        ],
+        "description": "Semantic empowers designers and developers by creating a shared vocabulary for UI.",
+        "homepage": "http://www.semantic-ui.com",
+        "keywords": [
+            "css",
+            "framework",
+            "semantic",
+            "ui"
+        ]
+    }
+]
