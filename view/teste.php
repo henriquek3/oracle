@@ -36,17 +36,20 @@ $db = new \Freitech\Views\ConnectionTest();
             <?php
                 foreach ($db->verificaEspacoLivre() as $item){
                     echo "<tr>";
-                    echo "<td>".$item['TablespaceName']."</td>";
+                    echo "<td>" . $item['TABLESPACE_NAME'] . "</td>";
                     echo "<td>".$item['DATAFILE']."</td>";
-                    echo "<td>".$item['Total_MB']."</td>";
-                    echo "<td>".$item['Used_MB']."</td>";
-                    echo "<td>".$item['Free_MB']."</td>";
+                    echo "<td>" . $item['TOTAL_MB'] . "</td>";
+                    echo "<td>" . $item['USED_MB'] . "</td>";
+                    echo "<td>" . $item['FREE_MB'] . "</td>";
                 }
             ?>
             </tbody>
             <tfoot>
-            <tr><th>3 People</th>
-                <th>2 Approved</th>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
                 <th></th>
             </tr></tfoot>
         </table>

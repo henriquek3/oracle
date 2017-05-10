@@ -13,6 +13,7 @@ class ComposerStaticInited9ae2f358abf584da1712e9f75d21f1
         ),
         'F' => 
         array (
+            'Freitech\\Views\\' => 15,
             'Freitech\\Model\\' => 15,
         ),
     );
@@ -21,6 +22,10 @@ class ComposerStaticInited9ae2f358abf584da1712e9f75d21f1
         'PDOOCI\\' => 
         array (
             0 => __DIR__ . '/..' . '/taq/pdooci/src',
+        ),
+        'Freitech\\Views\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/view',
         ),
         'Freitech\\Model\\' => 
         array (

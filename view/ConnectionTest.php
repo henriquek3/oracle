@@ -22,11 +22,11 @@ class ConnectionTest
 
     public function verificaEspacoLivre()
     {
-        $query = "  SELECT DDF.TABLESPACE_NAME AS TablespaceName,
+        $query = "  SELECT DDF.TABLESPACE_NAME AS TABLESPACE_NAME,
                            DDF.FILE_NAME AS DATAFILE,
-                           DDF.BYTES / (1024 * 1024) AS Total_MB,
-                           ROUND((DDF.BYTES - SUM(NVL(DFS.BYTES, 0))) / (1024 * 1024), 1) AS Used_MB,
-                           ROUND(SUM(NVL(DFS.BYTES, 0)) / (1024 * 1024), 1) AS Free_MB
+                           DDF.BYTES / (1024 * 1024) AS TOTAL_MB,
+                           ROUND((DDF.BYTES - SUM(NVL(DFS.BYTES, 0))) / (1024 * 1024), 1) AS USED_MB,
+                           ROUND(SUM(NVL(DFS.BYTES, 0)) / (1024 * 1024), 1) AS FREE_MB
                       FROM SYS.DBA_FREE_SPACE DFS
                  LEFT JOIN SYS.DBA_DATA_FILES DDF
                         ON DFS.FILE_ID = DDF.FILE_ID
