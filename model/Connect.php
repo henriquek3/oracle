@@ -28,8 +28,8 @@ class Connect extends \PDO
                               (SERVICE_NAME = ORCL01)
                             )
                           )';
-        $this->user = 'SYSTEM';
-        $this->pass = '0000d121c554';
+        $this->user = 'ceres2302';
+        $this->pass = '0000D121C554';
         $dns = $this->engine . ':dbname=' . $this->sid; //$this->sid; Ambos nessa configuração conectaram sem problema
 
         try {
