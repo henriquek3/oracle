@@ -5,16 +5,16 @@
  * Date: 03/05/2017
  * Time: 14:13
  */
+//namespace Freitech\Model;
 
-namespace Freitech\Model;
-
-class Connect extends \PDO
+class ConnectHome extends \PDO
 {
     private $engine;
     private $sid;
     private $user;
     private $pass;
-    private $tns;
+
+    //private $tns;
 
     public function __construct()
     {
@@ -33,15 +33,4 @@ class Connect extends \PDO
             echo $exception->getMessage();
         }
     }
-}
-
-$db = new Connect();
-
-$res = $db->prepare("SELECT * FROM FILIAIS");
-$res->execute();
-$resultado = $res->fetchAll(\PDO::FETCH_ASSOC);
-foreach ($resultado as $kay) {
-    echo "<pre>";
-    echo $kay['SIGLA_FILIAL'];
-    echo "</pre>";
 }
