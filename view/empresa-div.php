@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jeanfreitas
- * Date: 19/06/2017
- * Time: 22:29
- */
 require "../model/ConnectHome.php";
 $db = new ConnectHome();
 
@@ -34,8 +28,8 @@ $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 </div>
 <div class="filial">
     <label for="filial">Filiais</label>
-    <div name="filiais" id="filiais">
-    </div>
+    <select name="filiais" id="filiais">
+    </select>
 </div>
 <div id="resposta"></div>
 <p style="background-color: red;color: yellow;font-size: 20px" id="amostra"></p>
@@ -43,7 +37,10 @@ $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
     function showCustomer(str) {
         var xhttp;
-
+        if (str == "") {
+            document.getElementById("empresa").innerHTML = "";
+            return;
+        }
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {

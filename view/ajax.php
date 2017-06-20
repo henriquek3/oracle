@@ -16,6 +16,7 @@ $resultado = $res->fetchAll(\PDO::FETCH_ASSOC);
 foreach ($resultado as $kay) {
     //echo "<pre>";
     //echo $kay['SIGLA_FILIAL'];
-    echo '<option value="' . $kay['COD_FILIAL'] . '">' . $kay['SIGLA_FILIAL'] . '</option>';
+    //echo '<option value="' . $kay['COD_FILIAL'] . '">' . $kay['SIGLA_FILIAL'] . '</option>';
+    echo '<button class="button">' . $kay['SIGLA_FILIAL'] . '</button>';
     //echo "</pre>";
 }

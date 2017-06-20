@@ -20,7 +20,7 @@ class Connect extends \PDO
     public function __construct()
     {
         $this->engine = 'oci';
-        $this->sid = '10.1.1.9/orcl01';
+        $this->sid = 'localhost/suporte';
         $this->tns = '(DESCRIPTION =
                         (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.1.9)(PORT = 1521))
                              (CONNECT_DATA =
@@ -28,7 +28,7 @@ class Connect extends \PDO
                               (SERVICE_NAME = ORCL01)
                             )
                           )';
-        $this->user = 'ceres2302';
+        $this->user = 'FREITECHNEW';
         $this->pass = '0000D121C554';
         $dns = $this->engine . ':dbname=' . $this->sid; //$this->sid; Ambos nessa configuração conectaram sem problema
 
