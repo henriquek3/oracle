@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: henri
- * Date: 03/05/2017
- * Time: 16:40
- */
+
+use Freitech\View\ConnectionTest;
+use Freitech\Model\Connect;
 
 require "../vendor/autoload.php";
 
-$db = new \Freitech\Views\ConnectionTest();
+$db = new ConnectionTest();
 
 ?>
 <html>
@@ -36,7 +33,7 @@ $db = new \Freitech\Views\ConnectionTest();
             <?php
                 foreach ($db->verificaEspacoLivre() as $item){
                     echo "<tr>";
-                    echo "<td>" . $item['TABLESPACE_NAME'] . "</td>";
+                    echo "<td>" . $item['TABLESPACE'] . "</td>";
                     echo "<td>".$item['DATAFILE']."</td>";
                     echo "<td>" . $item['TOTAL_MB'] . "</td>";
                     echo "<td>" . $item['USED_MB'] . "</td>";
@@ -46,12 +43,13 @@ $db = new \Freitech\Views\ConnectionTest();
             </tbody>
             <tfoot>
             <tr>
+                <th>3 People</th>
+                <th>2 Approved</th>
                 <th></th>
                 <th></th>
                 <th></th>
-                <th></th>
-                <th></th>
-            </tr></tfoot>
+            </tr>
+            </tfoot>
         </table>
     </div>
 </body>

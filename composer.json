@@ -16,7 +16,7 @@
   "autoload": {
     "psr-4": {
       "Freitech\\Model\\": "model/",
-      "Freitech\\Views\\": "view/"
+      "Freitech\\View\\": "view/"
     }
   }
 }
