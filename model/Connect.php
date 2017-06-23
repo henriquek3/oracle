@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: henri
- * Date: 03/05/2017
- * Time: 14:13
- */
 
 namespace Freitech\Model;
-
 
 class Connect extends \PDO
 {
@@ -15,23 +8,13 @@ class Connect extends \PDO
     private $sid;
     private $user;
     private $pass;
-    private $tns;
-
     public function __construct()
     {
         $this->engine = 'oci';
-        $this->sid = 'localhost/suporte';
-        $this->tns = '(DESCRIPTION =
-                        (ADDRESS = (PROTOCOL = TCP)(HOST = 10.1.1.9)(PORT = 1521))
-                             (CONNECT_DATA =
-                              (SERVER = DEDICATED)
-                              (SERVICE_NAME = ORCL01)
-                            )
-                          )';
-        $this->user = 'FREITECHNEW';
+        $this->sid = 'localhost/xe';
+        $this->user = 'agricola';
         $this->pass = '0000D121C554';
-        $dns = $this->engine . ':dbname=' . $this->sid; //$this->sid; Ambos nessa configuração conectaram sem problema
-
+        $dns = $this->engine . ':dbname=' . $this->sid;
         try {
             parent::__construct($dns, $this->user, $this->pass);
         } catch (\PDOException $exception) {

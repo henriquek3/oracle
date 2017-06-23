@@ -1,10 +1,11 @@
 <?php
-require "../model/ConnectHome.php";
-$db = new ConnectHome();
+require "../model/Connect.php";
+$db = new Connect();
 
 $stmt = $db->prepare("SELECT * FROM EMPRESAS");
 $stmt->execute();
 $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
 ?>
 <html>
 <head>
@@ -34,7 +35,6 @@ $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 <div id="resposta"></div>
 <p style="background-color: red;color: yellow;font-size: 20px" id="amostra"></p>
 <script>
-
     function showCustomer(str) {
         var xhttp;
         if (str == "") {
@@ -44,14 +44,7 @@ $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                //document.getElementById("filiais").innerHTML += this.responseText;
                 document.getElementById("filiais").innerHTML = this.responseText;
-                /*var txt = this.responseText;
-                 var fil = document.getElementById('filiais');
-                 var sel = document.createElement('option');
-                 var node = document.createTextNode(txt);
-                 sel.appendChild(node);
-                 fil.appendChild(sel);*/
             }
         };
         xhttp.open("GET", "ajax.php?empresa=" + str, true);

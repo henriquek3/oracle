@@ -5,8 +5,8 @@
  * Date: 19/06/2017
  * Time: 22:29
  */
-require "../model/ConnectHome.php";
-$db = new ConnectHome();
+require "../model/Connect.php";
+$db = new Connect();
 
 $stmt = $db->prepare("SELECT * FROM EMPRESAS");
 $stmt->execute();

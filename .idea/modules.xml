@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/oracle.iml" filepath="$PROJECT_DIR$/.idea/oracle.iml" />
+      <module fileurl="file://D:\wamp64\www\oracle\.idea\oracle.iml" filepath="D:\wamp64\www\oracle\.idea\oracle.iml" />
     </modules>
   </component>
 </project>

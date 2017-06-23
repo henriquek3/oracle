@@ -13,8 +13,9 @@ class ComposerStaticInited9ae2f358abf584da1712e9f75d21f1
         ),
         'F' => 
         array (
-            'Freitech\\Views\\' => 15,
+            'Freitech\\View\\' => 14,
             'Freitech\\Model\\' => 15,
+            'Freitech\\Controller\\' => 20,
         ),
     );
 
@@ -23,7 +24,7 @@ class ComposerStaticInited9ae2f358abf584da1712e9f75d21f1
         array (
             0 => __DIR__ . '/..' . '/taq/pdooci/src',
         ),
-        'Freitech\\Views\\' => 
+        'Freitech\\View\\' => 
         array (
             0 => __DIR__ . '/../..' . '/view',
         ),
@@ -31,6 +32,10 @@ class ComposerStaticInited9ae2f358abf584da1712e9f75d21f1
         array (
             0 => __DIR__ . '/../..' . '/model',
         ),
+        'Freitech\\Controller\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/controller',
+            ),
     );
 
     public static function getInitializer(ClassLoader $loader)

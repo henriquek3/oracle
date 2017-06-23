@@ -5,10 +5,10 @@
  * Date: 19/06/2017
  * Time: 22:27
  */
-require "../model/ConnectHome.php";
+require "../model/Connect.php";
 
 $empresa = $_GET['empresa'];
-$db = new ConnectHome();
+$db = new Connect();
 $res = $db->prepare("SELECT * FROM FILIAIS WHERE COD_EMPRESA = " . $empresa);
 $res->execute();
 $resultado = $res->fetchAll(\PDO::FETCH_ASSOC);

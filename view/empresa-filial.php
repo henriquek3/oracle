@@ -1,9 +1,18 @@
 <?php
-require "../model/Connect.php";
-$db = new Connect();
-$stmt = $db->prepare("SELECT * FROM EMPRESAS");
-$stmt->execute();
-$res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+/**
+ * Created by PhpStorm.
+ * User: jeanfreitas
+ * Date: 20/06/2017
+ * Time: 20:59
+ */
+namespace Freitech\View;
+use Freitech\Model\querySelectAll;
+
+require '../vendor/autoload.php';
+$emp = new querySelectAll();
+
+$resEMp = $emp->selectTable('empresas', '*', '100');
+var_dump($resEMp);
 ?>
 <html>
 <head>
@@ -21,28 +30,19 @@ $res = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         <span class="label-empresas">Empresas</span>
         <div class="empresa-option">
             <?php
-            foreach ($res as $item) {
-                //echo '<option value="' . $item['COD_EMPRESA'] . '">' . $item['NOME_EMPRESA'] . '</option>';
-                //echo '<button class="button"  value="' . $item['COD_EMPRESA'] . '" onclick="showCustomer(this.value)">'. $item['NOME_EMPRESA'] .'</button>';
+            foreach ($emp as $item) {
                 echo '<button class="button"  value="' . $item['COD_EMPRESA'] . '">' . $item['NOME_EMPRESA'] . '</button>';
             }
             ?>
         </div>
     </div>
-
     <div class="filiais">
         <span class="label-filiais">Filiais</span>
         <div class="filiais-options" id="filiais">
             <button class="button" type="hidden">Filiais</button>
         </div>
     </div>
-    <div>
-        <p id="demo">TESTE</p>
-    </div>
 </div>
 <script src="js/select-empresa.js"></script>
-<script>
-
-</script>
 </body>
 </html>

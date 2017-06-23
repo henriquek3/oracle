@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'PDOOCI\\' => array($vendorDir . '/taq/pdooci/src'),
-    'Freitech\\Views\\' => array($baseDir . '/view'),
+    'Freitech\\View\\' => array($baseDir . '/view'),
     'Freitech\\Model\\' => array($baseDir . '/model'),
+    'Freitech\\Controller\\' => array($baseDir . '/controller'),
 );
