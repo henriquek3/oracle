@@ -1,6 +1,6 @@
 <?php
 
-namespace Freitech\Model;
+#namespace Freitech\Model;
 
 class Connect extends \PDO
 {
@@ -11,8 +11,8 @@ class Connect extends \PDO
     public function __construct()
     {
         $this->engine = 'oci';
-        $this->sid = 'localhost/xe';
-        $this->user = 'agricola';
+        $this->sid = 'localhost/suporte';
+        $this->user = 'masutti';
         $this->pass = '0000D121C554';
         $dns = $this->engine . ':dbname=' . $this->sid;
         try {
