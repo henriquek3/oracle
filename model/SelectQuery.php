@@ -6,7 +6,7 @@ class SelectQuery
     public function estados()
     {
         $db = new Connect();
-        $query = "SELECT uf.uf, uf.DESCRICAO_UF FROM uf ORDER BY uf.uf";
+        $query = "SELECT uf.uf, uf.descricao_uf FROM uf ORDER BY uf.uf";
         $stmt = $db->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll();

@@ -8,4 +8,4 @@
 require "../model/SelectQuery.php";
 $sel = new SelectQuery();
 $estados = $sel->estados();
-json_encode(["estados" => $estados]);
+echo json_encode(["estados" => $estados]);
