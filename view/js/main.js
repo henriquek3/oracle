@@ -4,17 +4,17 @@ $(document).ready(function () {
     var requestEstados = $.ajax({
         url: 'controller/estados.php',
         type: 'POST',
-        dataType: 'json',
-        data: {param1: 'value1'},
-    })
-    requestEstados.done(function (e) {
+        dataType: 'text',
+        data: {select: 'estados'},
+    });
+    requestEstados.done(function (estados) {
         console.log("Done!");
-        console.log(e.msg);
+        console.log(estados);
         var sel = "";
-        for (var key in e) {
-            sel += '"<option value="' + e[key].estados + '">' + e[key].uf_descricao + '</option>';
+        for (var key in estados) {
+            sel += '"<option value="' + estados[key].UF + '">' + estados[key].DESCRICAO_UF + '</option>';
         }
-        console.log(sel.uf);
+        $("#estados").html(sel);
     });
     requestEstados.fail(function (e) {
         console.log("Fail!");
