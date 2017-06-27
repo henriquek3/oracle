@@ -1,5 +1,13 @@
-﻿--SELECT uf.uf,uf.DESCRICAO_UF  FROM uf ORDER BY uf.uf
---SELECT cd.SEQ_PLA_CIDADES, cd.NOME_CIDADE,cd.UF FROM cidades cd
+﻿SELECT
+  uf.uf,
+  uf.DESCRICAO_UF
+FROM uf
+ORDER BY uf.uf
+SELECT
+  cd.SEQ_PLA_CIDADES,
+  cd.NOME_CIDADE,
+  cd.UF
+FROM cidades cd
 
 SELECT
   CL.SEQ_PLA_CLIENTE,
