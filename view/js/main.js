@@ -1,6 +1,5 @@
 $(document).ready(function () {
     $('select.dropdown').dropdown();
-
     var requestEstados = $.ajax({
         url: 'controller/estados.php',
         type: 'POST',
@@ -10,22 +9,22 @@ $(document).ready(function () {
         }
     });
     requestEstados.done(function (estados) {
-        console.log("Done!");
-        var sel = "";
+        console.log("requestEstados Done!");
+        var sel = '';
         for (var key in estados) {
-            sel += '"<option value="' + estados[key].UF + '">' + estados[key].DESCRICAO_UF + '</option>';
+            sel += '<option value="' + estados[key].UF + '">' + estados[key].DESCRICAO_UF + '</option>';
         }
         $("#estados").html(sel);
     });
     requestEstados.fail(function (e) {
-        console.log("Fail!");
+        console.log("requestEstados Fail!");
         console.log(e);
         $("#help").html(e.responseText);
     });
     $("#estados").change(function () {
-        var est = $("#estados").val();
+        //var est = $(this).val();
+        var est = "MT";
         console.log(est);
-
         var ufEst = $.ajax({
             url: 'controller/estados.php',
             type: 'POST',
@@ -34,9 +33,8 @@ $(document).ready(function () {
                 where: est
             }
         });
-
         ufEst.done(function (cd) {
-            console.log("Done!");
+            console.log("ufEst Done!");
             console.log(cd)
             var cid = "";
             for (var k in cd) {
@@ -44,6 +42,16 @@ $(document).ready(function () {
             }
             $("#cidades").html(cid);
         });
-
+        ufEst.fail(function (e) {
+            console.log("ufEst Fail!");
+            console.log(e);
+            $("#help").html(e.responseText);
+        });
     });
+    $("#formClientes").submit(function () {
+        var form = $(this).serialize();
+        console.log(form);
+        return false;
+    });
+
 });
